@@ -2,10 +2,9 @@ import { Link } from "react-router-dom";
 import classes from "./MainNavLink.module.css";
 
 const HighSchoolsList = ({ results }) => {
-    // 需要顯示的狀態
+
     const allowedStates = ['CO', 'CA', 'FL', 'NY', 'AZ'];
 
-    // 根據 level 分類
     const groupedResults = results.reduce((acc, result) => {
         const { state } = result;
         if (allowedStates.includes(state)) {
@@ -20,6 +19,9 @@ const HighSchoolsList = ({ results }) => {
     return (
         <div>
             <h1>小學和中學資訊</h1>
+            <div className={classes.item}>
+                <h3>以下是根據美國各州進行分類的國中及國小的學校，您可以根據您的需求進行選擇<br />點擊照片即可查看更多詳細的資訊唷！！</h3>
+            </div>
             {
                 Object.keys(groupedResults).map((state) => (
                     <div key={state}>

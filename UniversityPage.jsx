@@ -7,7 +7,7 @@ const UniversityPage = () => {
 }
 export default UniversityPage;
 export const UniversityLoader = async () => {
-    const response = await fetch("https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/us-colleges-and-universities/records?limit=20");
+    const response = await fetch("https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/us-colleges-and-universities/records?limit=100");
     // console.log(response)
     if (!response.ok) {
         return {

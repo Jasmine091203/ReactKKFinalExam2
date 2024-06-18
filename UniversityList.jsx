@@ -16,6 +16,10 @@ const UniversityList = ({ results }) => {
     return (
         <div>
             <h1>大學資訊</h1>
+            <div className={classes.item}>
+                <h3>以下是根據大學性質進行分類的大學，您可以根據您的需求進行選擇<br />點擊照片即可查看更多詳細的資訊唷！！</h3>
+            </div>
+
             {Object.keys(groupedByNaicsDesc).map((naics_desc) => (
                 <div key={naics_desc}>
                     <h2>{naics_desc}</h2>
